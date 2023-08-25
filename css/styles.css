@@ -1,0 +1,45 @@
+/* ------------- Global Variables ------------- */
+
+:root {
+  --clr-purple: #6b30d2;
+  --clr-orange: #ff6a48;
+  --clr-green: #03d054;
+  --clr-white: #ffffff;
+  --clr-grey: #e7e7e7;
+  --clr-black: #000000;
+
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --maxw-page: 1200px;
+  --minm-page: 30px;
+}
+
+/* ------------------ Resets ------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+}
