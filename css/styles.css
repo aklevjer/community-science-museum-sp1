@@ -23,7 +23,7 @@
   --bd-radius-medium: 15px;
   --bd-radius-large: 30px;
 
-  --maxw-page: 1200px;
+  --maxw-page: 1250px;
   --minm-page: 30px;
 }
 
@@ -42,11 +42,6 @@ ul {
 img {
   max-width: 100%;
   object-fit: cover;
-}
-
-input {
-  font-family: inherit;
-  border: none;
 }
 
 /* -------------- Global Elements ------------- */
@@ -74,8 +69,7 @@ h2 {
   font-size: 1.6em;
 }
 
-h3,
-i {
+h3 {
   font-size: 1.5em;
 }
 
@@ -87,8 +81,20 @@ p {
   hyphens: auto;
 }
 
+address {
+  font-style: normal;
+}
+
+strong {
+  display: block;
+}
+
 input {
+  width: 100%;
+  max-width: 200px;
   padding: 0.5rem;
+  font-family: inherit;
+  border: none;
   border-radius: var(--bd-radius-small);
 }
 
@@ -105,10 +111,11 @@ input[type="submit"] {
 }
 
 .cta {
-  max-width: fit-content;
+  height: fit-content;
   padding: 0.5rem 1.5rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-self: center;
   gap: 0.5rem;
   color: var(--clr-white);
   border-radius: var(--bd-radius-small);
@@ -203,6 +210,18 @@ input[type="submit"] {
 
 .border-green {
   border: var(--bd) var(--clr-green);
+}
+
+.border-bottom-purple {
+  border-bottom: 10px solid var(--clr-purple);
+}
+
+.border-bottom-orange {
+  border-bottom: 10px solid var(--clr-orange);
+}
+
+.border-bottom-green {
+  border-bottom: 10px solid var(--clr-green);
 }
 
 .shadow-purple {
@@ -313,6 +332,7 @@ input[type="submit"] {
 .burger-button {
   width: 2.5rem;
   height: 2.5rem;
+  font-size: 1.5em;
   cursor: pointer;
   border: var(--bd) var(--clr-black);
   border-radius: var(--bd-radius-small);
@@ -343,23 +363,19 @@ main > :not(:last-child) {
 }
 
 .explore-hero {
-  background: var(--clr-black) url("../images/explore/explore-hero.jpg");
-  background-position: center 20%;
+  background: var(--clr-black) url("../images/explore/explore-hero.jpg") center 20%;
 }
 
 .exhibitions-hero {
-  background: var(--clr-black) url("../images/exhibitions/exhibitions-hero.jpg");
-  background-position: center 15%;
+  background: var(--clr-black) url("../images/exhibitions/exhibitions-hero.jpg") center 15%;
 }
 
 .visit-us-hero {
-  background: var(--clr-black) url("../images/visit-us/visit-us-hero.jpg");
-  background-position: center 45%;
+  background: var(--clr-black) url("../images/visit-us/visit-us-hero.jpg") center 45%;
 }
 
 .get-involved-hero {
-  background: var(--clr-black) url("../images/get-involved/get-involved-hero.jpg");
-  background-position: center 50%;
+  background: var(--clr-black) url("../images/get-involved/get-involved-hero.jpg") center 50%;
 }
 
 /* ---------------- Newsletter ---------------- */
@@ -372,7 +388,7 @@ main > :not(:last-child) {
 
 .newsletter__title {
   max-width: 30ch;
-  margin-bottom: 1.5rem;
+  margin: 0 1.5rem 1.5rem;
   font-family: var(--ff-secondary);
   font-size: 1.5em;
 }
@@ -382,6 +398,7 @@ main > :not(:last-child) {
 }
 
 .newsletter__form .cta {
+  width: fit-content;
   color: var(--clr-white);
 }
 
@@ -458,8 +475,8 @@ footer p {
 
 /* ------------------ Events ------------------ */
 
-.events__title {
-  margin-bottom: 2rem;
+.events {
+  gap: 2rem;
 }
 
 .events__wrapper {
@@ -475,7 +492,7 @@ footer p {
 
 .events__card__content {
   max-width: 45ch;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   justify-self: center;
 }
 
@@ -485,31 +502,32 @@ footer p {
 
 /* ------------------- Plan ------------------- */
 
+.plan {
+  gap: 2rem;
+}
+
 .plan__wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .plan__card {
-  flex: 1;
-  display: grid;
-  place-content: center;
+  padding: 2rem;
   border-radius: var(--bd-radius-medium);
 }
 
-.opening-hours {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 1rem 4rem;
+.plan li {
+  display: flex;
 }
 
-.day {
-  text-align: left;
+.plan__opening-hours li {
+  justify-content: space-between;
 }
 
-.hours {
-  text-align: right;
+.plan__contact-info li {
+  align-items: center;
+  gap: 0.5rem;
 }
 
 /* --------------- Explore Page --------------- */
@@ -535,22 +553,28 @@ footer p {
 
 /* ------------- Exhibitions Page ------------- */
 
-.exhibitions-list {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
+.exhibitions {
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 4rem 2rem;
 }
 
 .exhibition-card {
-  /* grid-template-rows: 1fr auto auto auto; */
+  grid-template-rows: min-content 1fr;
   overflow: hidden;
   border-radius: var(--bd-radius-medium);
 }
 
-.exhibition-card__image {
-  max-height: 100%;
+.exhibition__content {
+  padding: 1rem;
+  grid-template-rows: min-content auto auto;
 }
 
-/* --------------- Media Queries -------------- */
+.exhibition__illustration {
+  margin-top: 2rem;
+  place-self: end center;
+}
+
+/* ---------------- Media Query --------------- */
 
 @media (min-width: 768px) {
   /* ---------------- Navigation ---------------- */
@@ -645,16 +669,28 @@ footer p {
 
   /* ------------------ Events ------------------ */
 
-  .events__wrapper,
-  .events__card {
-    grid-template-columns: repeat(2, 1fr);
+  .events {
+    grid-template-areas:
+      "title cta"
+      "wrapper wrapper";
+  }
+
+  .events__title {
+    grid-area: title;
+  }
+
+  .events__cta {
+    grid-area: cta;
+    justify-self: end;
   }
 
   .events__wrapper {
-    grid-template-rows: repeat(2, 1fr);
+    grid-area: wrapper;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .events__card {
+    grid-template-columns: repeat(2, 1fr);
     max-height: 350px;
   }
 
@@ -664,7 +700,6 @@ footer p {
   }
 
   .events__card__content {
-    padding: 0;
     align-self: center;
   }
 
