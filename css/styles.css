@@ -1,12 +1,18 @@
-/* ------------- Global Variables ------------- */
+/* -------------------------------------------- */
+/*               Global Variables               */
+/* -------------------------------------------- */
 
 :root {
   --clr-purple: #6b30d2;
   --clr-orange: #ff6a48;
   --clr-green: #03d054;
-  --clr-white: #ffffff;
   --clr-grey: #e7e7e7;
+  --clr-white: #ffffff;
   --clr-black: #000000;
+
+  --clr-purple-shadow: rgba(107, 48, 210, 0.3);
+  --clr-orange-shadow: rgba(255, 106, 72, 0.3);
+  --clr-green-shadow: rgba(3, 208, 84, 0.3);
   --clr-dark-shadow: rgba(0, 0, 0, 0.9);
   --clr-medium-shadow: rgba(0, 0, 0, 0.75);
   --clr-light-shadow: rgba(0, 0, 0, 0.2);
@@ -25,9 +31,12 @@
 
   --maxw-page: 1250px;
   --minm-page: 30px;
+  --hgt-header: 130px;
 }
 
-/* ------------------ Resets ------------------ */
+/* -------------------------------------------- */
+/*                    Resets                    */
+/* -------------------------------------------- */
 
 * {
   margin: 0;
@@ -44,7 +53,9 @@ img {
   object-fit: cover;
 }
 
-/* -------------- Global Elements ------------- */
+/* -------------------------------------------- */
+/*                Global Elements               */
+/* -------------------------------------------- */
 
 body {
   min-height: 100vh;
@@ -87,6 +98,7 @@ address {
 
 strong {
   display: block;
+  font-weight: var(--fw-semibold);
 }
 
 input {
@@ -98,7 +110,9 @@ input {
   border-radius: var(--bd-radius-small);
 }
 
-/* -------------- Links / Buttons ------------- */
+/* -------------------------------------------- */
+/*                Links / Buttons               */
+/* -------------------------------------------- */
 
 a,
 input[type="submit"] {
@@ -123,7 +137,7 @@ input[type="submit"] {
   background-color: var(--clr-black);
 }
 
-.cta:hover {
+.cta:is(:hover, :focus) {
   color: var(--clr-black);
   transition: background-color 125ms linear;
   background-color: transparent;
@@ -135,7 +149,7 @@ input[type="submit"] {
   background-color: var(--clr-white);
 }
 
-.white-cta:hover {
+.white-cta:is(:hover, :focus) {
   color: var(--clr-white);
 }
 
@@ -144,7 +158,9 @@ input[type="submit"] {
   transform: scale(0.95);
 }
 
-/* ------------------ Utility ----------------- */
+/* -------------------------------------------- */
+/*                Utility Classes               */
+/* -------------------------------------------- */
 
 .container {
   width: min(var(--maxw-page), 100% - var(--minm-page));
@@ -183,7 +199,7 @@ input[type="submit"] {
   transition: width 300ms ease;
 }
 
-.nav-link:hover::before,
+.nav-link:is(:hover, :focus)::before,
 .current::before {
   width: 100%;
 }
@@ -225,18 +241,20 @@ input[type="submit"] {
 }
 
 .shadow-purple {
-  box-shadow: 0 0 20px 0 rgba(107, 48, 210, 0.3);
+  box-shadow: 0 0 20px 0 var(--clr-purple-shadow);
 }
 
 .shadow-orange {
-  box-shadow: 0 0 20px 0 rgba(255, 106, 72, 0.3);
+  box-shadow: 0 0 20px 0 var(--clr-orange-shadow);
 }
 
 .shadow-green {
-  box-shadow: 0 0 20px 0 rgba(3, 208, 84, 0.3);
+  box-shadow: 0 0 20px 0 var(--clr-green-shadow);
 }
 
-.shadow {
+.card {
+  overflow: hidden;
+  border-radius: var(--bd-radius-medium);
   box-shadow: 0 0 50px 0 var(--clr-light-shadow);
 }
 
@@ -286,21 +304,26 @@ input[type="submit"] {
   display: none;
 }
 
-/* ------------------ Header ------------------ */
+/* -------------------------------------------- */
+/*                    Header                    */
+/* -------------------------------------------- */
 
 .header__container {
-  min-height: 130px;
+  min-height: var(--hgt-header);
 }
 
-/* ---------------- Navigation ---------------- */
+/* -------------------------------------------- */
+/*                  Navigation                  */
+/* -------------------------------------------- */
 
 .header__nav {
   position: absolute;
-  top: 130px;
+  top: var(--hgt-header);
   left: 0;
   width: 100%;
   border-radius: 0 0 var(--bd-radius-large) var(--bd-radius-large);
   background-color: var(--clr-white);
+  box-shadow: 0px 20px 20px -6px rgba(0, 0, 0, 0.1);
   z-index: 3;
 }
 
@@ -332,24 +355,26 @@ input[type="submit"] {
 .burger-button {
   width: 2.5rem;
   height: 2.5rem;
-  font-size: 1.5em;
   cursor: pointer;
   border: var(--bd) var(--clr-black);
   border-radius: var(--bd-radius-small);
 }
 
-/* ------------------- Main ------------------- */
+/* -------------------------------------------- */
+/*                     Main                     */
+/* -------------------------------------------- */
 
 main > :not(:last-child) {
   margin-bottom: 5rem;
 }
 
-/* ---------------- Page Heroes --------------- */
+/* -------------------------------------------- */
+/*                  Page Heroes                 */
+/* -------------------------------------------- */
 
 .hero {
   position: relative;
   min-height: 200px;
-  place-content: center;
   color: var(--clr-white);
   z-index: 1;
 }
@@ -378,7 +403,9 @@ main > :not(:last-child) {
   background: var(--clr-black) url("../images/get-involved/get-involved-hero.jpg") center 50%;
 }
 
-/* ---------------- Newsletter ---------------- */
+/* -------------------------------------------- */
+/*                  Newsletter                  */
+/* -------------------------------------------- */
 
 .newsletter {
   padding-block: 3.5rem;
@@ -402,11 +429,13 @@ main > :not(:last-child) {
   color: var(--clr-white);
 }
 
-.newsletter__form .cta:hover {
+.newsletter__form .cta:is(:hover, :focus) {
   color: var(--clr-black);
 }
 
-/* ------------------ Footer ------------------ */
+/* -------------------------------------------- */
+/*                    Footer                    */
+/* -------------------------------------------- */
 
 footer {
   position: relative;
@@ -439,7 +468,9 @@ footer p {
   margin-block: 1.5rem;
 }
 
-/* ----------------- Home Page ---------------- */
+/* -------------------------------------------- */
+/*                   Home Page                  */
+/* -------------------------------------------- */
 
 /* ------------------- Hero ------------------- */
 
@@ -453,7 +484,7 @@ footer p {
 }
 
 .home-hero__title {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 
 .home-hero__body {
@@ -462,11 +493,6 @@ footer p {
 }
 
 /* ----------------- Showcase ----------------- */
-
-.showcase {
-  overflow: hidden;
-  border-radius: var(--bd-radius-medium);
-}
 
 .showcase__content {
   max-width: 45ch;
@@ -486,8 +512,6 @@ footer p {
 
 .events__card {
   grid-template-rows: 1fr auto;
-  overflow: hidden;
-  border-radius: var(--bd-radius-medium);
 }
 
 .events__card__content {
@@ -502,37 +526,50 @@ footer p {
 
 /* ------------------- Plan ------------------- */
 
-.plan {
+.plan,
+.plan__wrapper {
   gap: 2rem;
 }
 
 .plan__wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .plan__card {
+  max-width: 400px;
+  flex: 1 1 300px;
   padding: 2rem;
-  border-radius: var(--bd-radius-medium);
 }
 
 .plan li {
   display: flex;
 }
 
-.plan__opening-hours li {
+.opening-hours li {
   justify-content: space-between;
 }
 
-.plan__contact-info li {
+.contact-info {
+  place-content: center;
+  gap: 1rem;
+}
+
+.contact-info li {
   align-items: center;
   gap: 0.5rem;
 }
 
-/* --------------- Explore Page --------------- */
+.contact-info a {
+  text-transform: lowercase;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
 
-.explore-wrapper,
+/* -------------------------------------------- */
+/*                 Explore Page                 */
+/* -------------------------------------------- */
+
+.explore-areas,
 .explore-card {
   gap: 3rem;
 }
@@ -540,6 +577,11 @@ footer p {
 .explore-card {
   padding: 3rem 2rem;
   border-radius: 70px;
+  transition: transform 300ms ease;
+}
+
+.explore-card:hover {
+  transform: scale(1.02);
 }
 
 .explore-card__image {
@@ -548,20 +590,32 @@ footer p {
 
 .explore-card__content {
   max-width: 50ch;
-  align-self: center;
 }
 
-/* ------------- Exhibitions Page ------------- */
+/* -------------------------------------------- */
+/*               Exhibitions Page               */
+/* -------------------------------------------- */
 
 .exhibitions {
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 4rem 2rem;
 }
 
+.exhibition-card,
+.exhibition__illustration {
+  transition: transform 300ms ease;
+}
+
 .exhibition-card {
-  grid-template-rows: min-content 1fr;
-  overflow: hidden;
-  border-radius: var(--bd-radius-medium);
+  grid-template-rows: min-content auto;
+}
+
+.exhibition-card:hover {
+  transform: translateY(-1rem);
+}
+
+.exhibition-card:hover .exhibition__illustration {
+  transform: rotate(20deg);
 }
 
 .exhibition__content {
@@ -574,7 +628,67 @@ footer p {
   place-self: end center;
 }
 
-/* ---------------- Media Query --------------- */
+/* -------------------------------------------- */
+/*                 Visit Us Page                */
+/* -------------------------------------------- */
+
+.map,
+.map-wrapper {
+  position: relative;
+}
+
+.address-card,
+iframe {
+  position: absolute;
+}
+
+.address-card {
+  top: -30%;
+  left: 50%;
+  padding: 2rem;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: var(--clr-white);
+  z-index: 1;
+}
+
+/* Google Maps without the default "Info Card"
+Inspiration: https://stackoverflow.com/a/40432141 */
+
+.map-wrapper {
+  min-height: 350px;
+  overflow: hidden;
+  border-radius: var(--bd-radius-large);
+}
+
+iframe {
+  bottom: -15%;
+  left: -50%;
+  width: 200%;
+  height: 150%;
+}
+
+/* -------------------------------------------- */
+/*               Get Involved Page              */
+/* -------------------------------------------- */
+
+.get-involved {
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.get-involved,
+.get-involved__image {
+  border-radius: var(--bd-radius-medium);
+}
+
+.get-involved__content {
+  max-width: 45ch;
+}
+
+/* -------------------------------------------- */
+/*                  Media Query                 */
+/* -------------------------------------------- */
 
 @media (min-width: 768px) {
   /* ---------------- Navigation ---------------- */
@@ -583,6 +697,7 @@ footer p {
     position: static;
     width: fit-content;
     border-radius: 0;
+    box-shadow: none;
   }
 
   .header__nav ul {
@@ -618,7 +733,6 @@ footer p {
     display: flex;
     min-height: 400px;
     flex-direction: row-reverse;
-    align-items: stretch;
   }
 
   .home-hero::before,
@@ -626,6 +740,8 @@ footer p {
     content: "";
     position: absolute;
   }
+
+  /* Parallelogram */
 
   .home-hero::before {
     left: 0;
@@ -635,6 +751,8 @@ footer p {
     transform-origin: bottom;
     background-color: var(--clr-purple);
   }
+
+  /* Bottom Part */
 
   .home-hero::after {
     bottom: 0;
@@ -649,7 +767,7 @@ footer p {
   }
 
   .home-hero__content {
-    padding: 0 2rem 1.8rem;
+    padding: 0rem 2rem 1.8rem;
     z-index: 1;
   }
 
@@ -671,21 +789,21 @@ footer p {
 
   .events {
     grid-template-areas:
-      "title cta"
-      "wrapper wrapper";
+      "event-title event-cta"
+      "event-wrapper event-wrapper";
   }
 
   .events__title {
-    grid-area: title;
+    grid-area: event-title;
   }
 
   .events__cta {
-    grid-area: cta;
-    justify-self: end;
+    grid-area: event-cta;
+    place-self: center end;
   }
 
   .events__wrapper {
-    grid-area: wrapper;
+    grid-area: event-wrapper;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -703,26 +821,49 @@ footer p {
     align-self: center;
   }
 
-  /* --------------- Explore Page --------------- */
+  /* ------------------- Plan ------------------- */
 
-  .explore-wrapper {
-    gap: 5rem;
+  .plan {
+    grid-template-areas:
+      "plan-title plan-cta"
+      "plan-wrapper plan-wrapper";
   }
 
-  .explore-wrapper > :nth-child(2) {
-    justify-self: end;
+  .plan__title {
+    grid-area: plan-title;
+  }
+
+  .plan__cta {
+    grid-area: plan-cta;
+    place-self: center end;
+  }
+
+  .plan__wrapper {
+    grid-area: plan-wrapper;
+  }
+
+  /* --------------- Explore Page --------------- */
+
+  .explore-areas {
+    gap: 5rem;
+    align-items: stretch;
+  }
+
+  .explore-areas > :nth-child(3) {
+    align-self: end;
   }
 
   .explore-card {
     max-width: 950px;
     padding-inline: 2.5rem;
     flex-direction: row;
-    justify-content: space-around;
   }
 
-  .explore-card__image {
-    height: fit-content;
-    align-self: center;
+  /* --------------- Visit Us Page -------------- */
+
+  .address-card {
+    left: 15%;
+    transform: none;
   }
 
   /* ------------------ Footer ------------------ */
