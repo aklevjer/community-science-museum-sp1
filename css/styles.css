@@ -730,17 +730,18 @@ iframe {
 /*               Get Involved Page              */
 /* -------------------------------------------- */
 
-.get-involved {
+.get-involved-container {
+  max-width: 600px;
   padding: 2rem;
   gap: 2rem;
 }
 
-.get-involved,
-.get-involved__image {
+.get-involved-container,
+.get-involved-container__image {
   border-radius: var(--bd-radius-medium);
 }
 
-.get-involved__content {
+.get-involved-container__content {
   max-width: 45ch;
 }
 
@@ -927,6 +928,22 @@ iframe {
   .address-card {
     left: 15%;
     transform: none;
+  }
+
+  /* ------------- Get Involved Page ------------ */
+
+  .get-involved-container {
+    max-width: none;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .get-involved-container__content {
+    flex-basis: 60%;
+  }
+
+  .get-involved-container__image {
+    min-height: 350px;
   }
 
   /* ------------------ Footer ------------------ */
