@@ -13,10 +13,10 @@
   </head>
   <body>
     <header>
-      <div class="header__container container flex items-center justify-between">
+      <div class="header__container container flex justify-between">
         <a href="/"><img src="images/shared/logo-black-text.svg" alt="Community Science Museum logo in black text" /></a>
         <input type="checkbox" id="burger-toggle" class="hidden" />
-        <label for="burger-toggle" aria-label="Toggle Menu" class="burger-button flex items-center justify-center">
+        <label for="burger-toggle" aria-label="Toggle Menu" class="burger-button flex justify-center">
           <i class="fa-solid fa-bars fa-xl"></i>
           <i class="fa-solid fa-times fa-xl hidden"></i>
         </label>
@@ -33,12 +33,14 @@
     </header>
 
     <main>
-      <section class="hero exhibitions-hero flex items-center justify-center">
+      <section class="hero exhibitions-hero flex justify-center">
         <h1 class="heading line-orange">Exhibitions</h1>
       </section>
 
       <section class="exhibitions container grid">
-        <article class="exhibition-card grid card border-purple">
+        <h2 class="sr-only">Exhibitions List</h2>
+
+        <article class="exhibition-card card grid border-purple">
           <img src="images/exhibitions/cosmology.jpg" alt="Andromeda Galaxy, a stunning spiral of stars in the cosmos" class="border-bottom-purple" />
           <div class="exhibition__content grid">
             <h2 class="heading line-purple">Cosmology</h2>
@@ -46,7 +48,8 @@
             <img src="images/exhibitions/illustrations/cosmology-illustration.svg" alt="Ringed planet icon" class="exhibition__illustration" />
           </div>
         </article>
-        <article class="exhibition-card grid card border-green">
+
+        <article class="exhibition-card card grid border-green">
           <img src="images/exhibitions/biology-and-medicine.jpg" alt="Transparent model of human skull with visible brain and veins" class="border-bottom-green" />
           <div class="exhibition__content grid">
             <h2 class="heading line-green">Biology and medicine</h2>
@@ -54,7 +57,8 @@
             <img src="images/exhibitions/illustrations/biology-n-medicine-illustration.svg" alt="Microscope icon" class="exhibition__illustration" />
           </div>
         </article>
-        <article class="exhibition-card grid card border-orange">
+
+        <article class="exhibition-card card grid border-orange">
           <img src="images/exhibitions/evolution.jpg" alt="Skeleton of a mammoth on display in a museum exhibit" class="border-bottom-orange" />
           <div class="exhibition__content grid">
             <h2 class="heading line-orange">Evolution</h2>
@@ -62,7 +66,8 @@
             <img src="images/exhibitions/illustrations/evolution-illustration.svg" alt="Dinosaur bones icon" class="exhibition__illustration" />
           </div>
         </article>
-        <article class="exhibition-card grid card border-green">
+
+        <article class="exhibition-card card grid border-green">
           <img src="images/exhibitions/ecology.jpg" alt="Two vibrant green plants sprouting from the earth" class="border-bottom-green" />
           <div class="exhibition__content grid">
             <h2 class="heading line-green">Ecology</h2>
@@ -70,7 +75,8 @@
             <img src="images/exhibitions/illustrations/ecology-illustration.svg" alt="Ecology icon" class="exhibition__illustration" />
           </div>
         </article>
-        <article class="exhibition-card grid card border-orange">
+
+        <article class="exhibition-card card grid border-orange">
           <img src="images/exhibitions/robotics-and-ai.jpg" alt="Close-up view of a white robot staring into the camera" class="border-bottom-orange" />
           <div class="exhibition__content grid">
             <h2 class="heading line-orange">Robotics and AI</h2>
@@ -78,7 +84,8 @@
             <img src="images/exhibitions/illustrations/robotics-n-ai-illustration.svg" alt="Vintage robot icon" class="exhibition__illustration" />
           </div>
         </article>
-        <article class="exhibition-card grid card border-purple">
+
+        <article class="exhibition-card card grid border-purple">
           <img src="images/exhibitions/chemistry.jpg" alt="Pouring purple liquid from a beaker into an Erlenmeyer flask" class="border-bottom-purple" />
           <div class="exhibition__content grid">
             <h2 class="heading line-purple">Chemistry</h2>
@@ -88,8 +95,8 @@
         </article>
       </section>
 
-      <section class="newsletter grid">
-        <h3 class="newsletter__title text-center">Stay up-to-date with our latest news, events, and exhibitions!</h3>
+      <section class="newsletter">
+        <h3 class="newsletter__title container text-center">Stay up-to-date with our latest news, events, and exhibitions!</h3>
         <form class="newsletter__form flex justify-center">
           <label for="newsletter-email" class="sr-only">Email</label>
           <input type="email" id="newsletter-email" name="email" placeholder="email@example.com" required />
@@ -99,7 +106,7 @@
     </main>
 
     <footer>
-      <div class="footer__container container">
+      <div class="footer__container container grid">
         <img src="images/shared/logo-white-text.svg" alt="Community Science Museum logo in white text" class="footer__logo" />
         <nav class="footer__nav">
           <ul class="flex flex-col">
@@ -110,7 +117,7 @@
             <li><a href="get-involved.html" class="nav-link line-green">Get involved</a></li>
           </ul>
         </nav>
-        <ul class="footer__icons flex justify-center space-bottom">
+        <ul class="footer__icons flex space-bottom">
           <li>
             <a href="https://www.facebook.com" target="_blank">
               <i class="fa-brands fa-square-facebook fa-2x"></i>

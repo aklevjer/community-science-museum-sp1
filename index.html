@@ -13,10 +13,10 @@
   </head>
   <body>
     <header>
-      <div class="header__container container flex items-center justify-between">
+      <div class="header__container container flex justify-between">
         <a href="/"><img src="images/shared/logo-black-text.svg" alt="Community Science Museum logo in black text" /></a>
         <input type="checkbox" id="burger-toggle" class="hidden" />
-        <label for="burger-toggle" aria-label="Toggle Menu" class="burger-button flex items-center justify-center">
+        <label for="burger-toggle" aria-label="Toggle Menu" class="burger-button flex justify-center">
           <i class="fa-solid fa-bars fa-xl"></i>
           <i class="fa-solid fa-times fa-xl hidden"></i>
         </label>
@@ -34,8 +34,8 @@
 
     <main>
       <section class="home-hero">
-        <div class="flex"><img src="images/home/home-hero.jpg" alt="Dinosaur skeleton displayed in a purple-themed exhibit" /></div>
-        <div class="flex items-center justify-center">
+        <div><img src="images/home/home-hero.jpg" alt="Dinosaur skeleton displayed in a purple-themed exhibit" class="home-hero__image" /></div>
+        <div class="flex justify-center">
           <div class="home-hero__content">
             <h1 class="home-hero__title heading">Explore togheter!</h1>
             <p class="home-hero__body">Come join us at the Community Science Museum where we're committed to making science accessible to all.</p>
@@ -45,8 +45,8 @@
       </section>
 
       <section class="showcase container card">
-        <div class="flex"><img src="images/home/showcase.jpg" alt="A teenager wearing VR glasses while painting on a canvas" class="showcase__image" /></div>
-        <div class="flex items-center justify-center">
+        <div><img src="images/home/showcase.jpg" alt="A teenager wearing VR glasses while painting on a canvas" class="showcase__image" /></div>
+        <div class="flex justify-center">
           <div class="showcase__content">
             <h2 class="heading line-purple">Discover science magic</h2>
             <p class="space-bottom">We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore.</p>
@@ -57,45 +57,51 @@
 
       <section class="events container grid">
         <h3 class="events__title heading line-green">Special exhibitions and events</h3>
+
         <div class="events__wrapper grid">
           <article class="events__card grid card border-green">
-            <div class="events__card__image flex"><img src="images/home/events-article1.jpg" alt="A butterfly perched on a grass stem in a vibrant yellow and green setting" /></div>
+            <img src="images/home/events-article1.jpg" alt="A butterfly perched on a grass stem in a vibrant yellow and green setting" class="events__card__image" />
             <div class="events__card__content">
               <h4 class="heading line-green">Nature's wonders</h4>
               <p>On loan from the BioSphere Science Museum in Amsterdam, the Nature's Wonders exhibition is coming to the Community Science Museum. Journey through diverse ecosystems, from rainforests to deserts, and discover the wonders of Earth's species.</p>
             </div>
           </article>
+
           <article class="events__card grid card border-purple">
-            <div class="events__card__image flex"><img src="images/home/events-article2.jpg" alt="Spacesuit suspended on display against a space-themed backdrop" /></div>
+            <img src="images/home/events-article2.jpg" alt="Spacesuit suspended on display against a space-themed backdrop" class="events__card__image" />
             <div class="events__card__content">
               <h4 class="heading line-purple">Visiting professor of aeronautics</h4>
               <p>Prof Sheila Widnall from the Massachusetts Institute of Technology will be delivering 3 lectures on the development of aeronautics and where the future lies in this exciting ‘space’.</p>
             </div>
           </article>
+
           <article class="events__card grid card border-orange">
-            <div class="events__card__image flex"><img src="images/home/events-article3.jpg" alt="Spacious museum interior featuring a display of an elephant in a dark ambient setting" /></div>
+            <img src="images/home/events-article3.jpg" alt="Spacious museum interior featuring a display of an elephant in a dark ambient setting" class="events__card__image" />
             <div class="events__card__content">
               <h4 class="heading line-orange">Night in the museum</h4>
               <p>Get your family together for an exciting night in the museum as you sleep over beside dinosaurs and science displays. Bring your own sleeping bag and get ready to rough it as we go exploring the wonders of science.</p>
             </div>
           </article>
+
           <article class="events__card grid card border-green">
-            <div class="events__card__image flex"><img src="images/home/events-article4.jpg" alt="Vibrant seagrass habitat on the ocean floor, adorned with shades of green and teal" /></div>
+            <img src="images/home/events-article4.jpg" alt="Vibrant seagrass habitat on the ocean floor, adorned with shades of green and teal" class="events__card__image" />
             <div class="events__card__content">
               <h4 class="heading line-green">Mysteries of the ocean</h4>
               <p>Dive into the secrets of the oceans and the wonders they hold. Explore underwater ecosystems, deep-sea creatures, and the groundbreaking technology that allows us to study the depths.</p>
             </div>
           </article>
         </div>
+
         <a href="exhibitions.html" class="events__cta cta">Discover all<i class="fa-solid fa-arrow-right"></i></a>
       </section>
 
       <section class="plan container grid">
         <h3 class="plan__title heading line-orange">Plan your visit</h3>
+
         <div class="plan__wrapper flex justify-center">
           <div class="plan__card card">
             <h4 class="heading line-orange text-center">Opening hours</h4>
-            <ul class="opening-hours">
+            <ol class="opening-hours">
               <li>
                 <span>Monday</span>
                 <span>Closed</span>
@@ -124,16 +130,14 @@
                 <span>Sunday</span>
                 <span>9:00 - 13:00</span>
               </li>
-            </ul>
+            </ol>
           </div>
+
           <div class="plan__card card">
             <h4 class="heading line-green text-center">Contact information</h4>
             <ul class="contact-info grid">
               <li>
-                <span class="fa-stack fa-xl">
-                  <i class="fa-regular fa-circle fa-stack-2x"></i>
-                  <i class="fa-solid fa-location-dot fa-stack-1x"></i>
-                </span>
+                <i class="fa-solid fa-location-dot fa-xl circle-icon"></i>
                 <address>
                   <strong>Address</strong>
                   <p>Slottsplassen 1</p>
@@ -141,20 +145,14 @@
                 </address>
               </li>
               <li>
-                <span class="fa-stack fa-xl">
-                  <i class="fa-regular fa-circle fa-stack-2x"></i>
-                  <i class="fa-solid fa-envelope fa-stack-1x"></i>
-                </span>
+                <i class="fa-solid fa-envelope fa-xl circle-icon"></i>
                 <address>
                   <strong>Email</strong>
                   <a href="mailto:contact@csm.com">contact@csm.com</a>
                 </address>
               </li>
               <li>
-                <span class="fa-stack fa-xl">
-                  <i class="fa-regular fa-circle fa-stack-2x"></i>
-                  <i class="fa-solid fa-phone fa-stack-1x"></i>
-                </span>
+                <i class="fa-solid fa-phone fa-xl circle-icon"></i>
                 <address>
                   <strong>Phone</strong>
                   <a href="tel:+4712345678">+47 12 34 56 78</a>
@@ -162,6 +160,7 @@
               </li>
             </ul>
           </div>
+
           <div class="plan__card admission card">
             <h4 class="heading line-purple text-center">Admission</h4>
             <p class="space-bottom">The entrance is free for all.</p>
@@ -169,11 +168,12 @@
             <p>If you would like to organise a guided tour for your group of 6 or more people, please contact us to arrange the tour.</p>
           </div>
         </div>
+
         <a href="visit-us.html" class="plan__cta cta">Learn more<i class="fa-solid fa-arrow-right"></i></a>
       </section>
 
-      <section class="newsletter grid">
-        <h3 class="newsletter__title text-center">Stay up-to-date with our latest news, events, and exhibitions!</h3>
+      <section class="newsletter">
+        <h3 class="newsletter__title container text-center">Stay up-to-date with our latest news, events, and exhibitions!</h3>
         <form class="newsletter__form flex justify-center">
           <label for="newsletter-email" class="sr-only">Email</label>
           <input type="email" id="newsletter-email" name="email" placeholder="email@example.com" required />
@@ -183,7 +183,7 @@
     </main>
 
     <footer>
-      <div class="footer__container container">
+      <div class="footer__container container grid">
         <img src="images/shared/logo-white-text.svg" alt="Community Science Museum logo in white text" class="footer__logo" />
         <nav class="footer__nav">
           <ul class="flex flex-col">
@@ -194,7 +194,7 @@
             <li><a href="get-involved.html" class="nav-link line-green">Get involved</a></li>
           </ul>
         </nav>
-        <ul class="footer__icons flex justify-center space-bottom">
+        <ul class="footer__icons flex space-bottom">
           <li>
             <a href="https://www.facebook.com" target="_blank">
               <i class="fa-brands fa-square-facebook fa-2x"></i>

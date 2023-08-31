@@ -13,10 +13,10 @@
   </head>
   <body>
     <header>
-      <div class="header__container container flex items-center justify-between">
+      <div class="header__container container flex justify-between">
         <a href="/"><img src="images/shared/logo-black-text.svg" alt="Community Science Museum logo in black text" /></a>
         <input type="checkbox" id="burger-toggle" class="hidden" />
-        <label for="burger-toggle" aria-label="Toggle Menu" class="burger-button flex items-center justify-center">
+        <label for="burger-toggle" aria-label="Toggle Menu" class="burger-button flex justify-center">
           <i class="fa-solid fa-bars fa-xl"></i>
           <i class="fa-solid fa-times fa-xl hidden"></i>
         </label>
@@ -33,16 +33,17 @@
     </header>
 
     <main>
-      <section class="hero visit-us-hero flex items-center justify-center">
+      <section class="hero visit-us-hero flex justify-center">
         <h1 class="heading line-purple">Visit us</h1>
       </section>
 
       <section class="visit-info container">
         <h2 class="heading line-purple">Visitor information</h2>
-        <div class="card flex">
+
+        <div class="visit-info__wrapper card flex flex-col">
           <div>
             <h3 class="heading line-purple text-center">Opening hours</h3>
-            <ul>
+            <ol class="opening-hours">
               <li>
                 <span>Monday</span>
                 <span>Closed</span>
@@ -71,16 +72,14 @@
                 <span>Sunday</span>
                 <span>9:00 - 13:00</span>
               </li>
-            </ul>
+            </ol>
           </div>
+
           <div>
             <h3 class="heading line-green text-center">Contact information</h3>
             <ul class="contact-info grid">
               <li>
-                <span class="fa-stack fa-xl">
-                  <i class="fa-regular fa-circle fa-stack-2x"></i>
-                  <i class="fa-solid fa-location-dot fa-stack-1x"></i>
-                </span>
+                <i class="fa-solid fa-location-dot fa-xl circle-icon"></i>
                 <address>
                   <strong>Address</strong>
                   <p>Slottsplassen 1</p>
@@ -88,20 +87,14 @@
                 </address>
               </li>
               <li>
-                <span class="fa-stack fa-xl">
-                  <i class="fa-regular fa-circle fa-stack-2x"></i>
-                  <i class="fa-solid fa-envelope fa-stack-1x"></i>
-                </span>
+                <i class="fa-solid fa-envelope fa-xl circle-icon"></i>
                 <address>
                   <strong>Email</strong>
                   <a href="mailto:contact@csm.com">contact@csm.com</a>
                 </address>
               </li>
               <li>
-                <span class="fa-stack fa-xl">
-                  <i class="fa-regular fa-circle fa-stack-2x"></i>
-                  <i class="fa-solid fa-phone fa-stack-1x"></i>
-                </span>
+                <i class="fa-solid fa-phone fa-xl circle-icon"></i>
                 <address>
                   <strong>Phone</strong>
                   <a href="tel:+4712345678">+47 12 34 56 78</a>
@@ -109,6 +102,7 @@
               </li>
             </ul>
           </div>
+
           <div>
             <h3 class="heading line-orange text-center">Admission</h3>
             <p class="space-bottom">The entrance is free for all.</p>
@@ -132,29 +126,32 @@
         </div>
       </section>
 
-      <section class="container">
+      <section class="facilities container">
         <h2 class="heading line-orange">Facilities</h2>
-        <div>
-          <div class="card">
-            <i class="fa-solid fa-bag-shopping"></i>
+
+        <div class="facilities__wrapper flex justify-center">
+          <div class="facilities__card card">
+            <i class="fa-solid fa-bag-shopping fa-2x circle-icon facilities__icon"></i>
             <h3 class="heading line-orange text-center">Shop</h3>
             <p>Our shop offers a range of memorabilia from the museum as well as great gifts and activity packs that allow you to continue to explore science even after you’ve left the museum.</p>
           </div>
-          <div class="card">
-            <i class="fa-solid fa-utensils"></i>
+
+          <div class="facilities__card card">
+            <i class="fa-solid fa-utensils fa-2x circle-icon facilities__icon"></i>
             <h3 class="heading line-purple text-center">Food and drink</h3>
-            <p>There is a café attached to the mu-seum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
+            <p>There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
           </div>
-          <div class="card">
-            <i class="fa-brands fa-accessible-icon"></i>
+
+          <div class="facilities__card card">
+            <i class="fa-brands fa-accessible-icon fa-2x circle-icon facilities__icon"></i>
             <h3 class="heading line-green text-center">Accessibility</h3>
             <p>The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the visually impaired.</p>
           </div>
         </div>
       </section>
 
-      <section class="newsletter grid">
-        <h3 class="newsletter__title text-center">Stay up-to-date with our latest news, events, and exhibitions!</h3>
+      <section class="newsletter">
+        <h3 class="newsletter__title container text-center">Stay up-to-date with our latest news, events, and exhibitions!</h3>
         <form class="newsletter__form flex justify-center">
           <label for="newsletter-email" class="sr-only">Email</label>
           <input type="email" id="newsletter-email" name="email" placeholder="email@example.com" required />
@@ -164,7 +161,7 @@
     </main>
 
     <footer>
-      <div class="footer__container container">
+      <div class="footer__container container grid">
         <img src="images/shared/logo-white-text.svg" alt="Community Science Museum logo in white text" class="footer__logo" />
         <nav class="footer__nav">
           <ul class="flex flex-col">
@@ -175,7 +172,7 @@
             <li><a href="get-involved.html" class="nav-link line-green">Get involved</a></li>
           </ul>
         </nav>
-        <ul class="footer__icons flex justify-center space-bottom">
+        <ul class="footer__icons flex space-bottom">
           <li>
             <a href="https://www.facebook.com" target="_blank">
               <i class="fa-brands fa-square-facebook fa-2x"></i>
