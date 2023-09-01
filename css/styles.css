@@ -377,8 +377,8 @@ input[type="submit"] {
 /*                     Main                     */
 /* -------------------------------------------- */
 
-main > :not(:last-child) {
-  margin-bottom: 5rem;
+main > :not(:first-child, :last-child) {
+  margin-bottom: 7rem;
 }
 
 /* -------------------------------------------- */
@@ -387,6 +387,7 @@ main > :not(:last-child) {
 
 .hero {
   min-height: 200px;
+  margin-bottom: 5rem;
   color: var(--clr-white);
 }
 
@@ -472,6 +473,7 @@ footer p {
 
 .home-hero {
   background-color: var(--clr-purple);
+  margin-bottom: 5rem;
 }
 
 .home-hero__content {
@@ -497,17 +499,17 @@ footer p {
 
 /* ------------------ Events ------------------ */
 
-.events {
+.events,
+.events__container {
   gap: 2rem;
 }
 
-.events__wrapper {
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 3rem;
+.events__container {
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
 .events__card {
-  grid-template-rows: 1fr auto;
+  grid-template-rows: repeat(2, min-content);
 }
 
 .events__card__content {
@@ -516,18 +518,14 @@ footer p {
   justify-self: center;
 }
 
-.events__card__image {
-  max-height: 290px;
-}
-
 /* ------------------- Plan ------------------- */
 
 .plan,
-.plan__wrapper {
+.plan__container {
   gap: 2rem;
 }
 
-.plan__wrapper {
+.plan__container {
   align-items: stretch;
   flex-wrap: wrap;
 }
@@ -854,7 +852,7 @@ iframe {
   .events {
     grid-template-areas:
       "event-title event-cta"
-      "event-wrapper event-wrapper";
+      "events-container events-container";
   }
 
   .events__title {
@@ -866,23 +864,23 @@ iframe {
     place-self: center end;
   }
 
-  .events__wrapper {
-    grid-area: event-wrapper;
-    grid-template-columns: repeat(2, 1fr);
+  .events__container {
+    grid-area: events-container;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    gap: 3rem;
   }
 
   .events__card {
-    grid-template-columns: repeat(2, 1fr);
-    max-height: 350px;
+    grid-template: repeat(auto-fit, minmax(240px, 1fr)) / repeat(auto-fit, minmax(240px, 1fr));
   }
 
   .events__card__image {
-    max-height: none;
-    max-width: 243px;
+    height: 100%;
+    width: 100%;
   }
 
   .events__card__content {
-    align-self: center;
+    padding-block: 2rem;
   }
 
   /* ------------------- Plan ------------------- */
@@ -890,7 +888,7 @@ iframe {
   .plan {
     grid-template-areas:
       "plan-title plan-cta"
-      "plan-wrapper plan-wrapper";
+      "plan-container plan-container";
   }
 
   .plan__title {
@@ -902,8 +900,8 @@ iframe {
     place-self: center end;
   }
 
-  .plan__wrapper {
-    grid-area: plan-wrapper;
+  .plan__container {
+    grid-area: plan-container;
   }
 
   /* --------------- Explore Page --------------- */
