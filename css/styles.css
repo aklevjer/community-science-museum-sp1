@@ -13,12 +13,12 @@
   --clr-purple-shadow: rgba(107, 48, 210, 0.3);
   --clr-orange-shadow: rgba(255, 106, 72, 0.3);
   --clr-green-shadow: rgba(3, 208, 84, 0.3);
-  --clr-dark-shadow: rgba(0, 0, 0, 0.9);
-  --clr-medium-shadow: rgba(0, 0, 0, 0.75);
   --clr-light-shadow: rgba(0, 0, 0, 0.2);
+  --clr-medium-shadow: rgba(0, 0, 0, 0.75);
+  --clr-dark-shadow: rgba(0, 0, 0, 0.9);
 
   --ff-primary: "Poppins", Helvetica, Verdana, sans-serif;
-  --ff-secondary: "Raleway", Helvetica, Verdana, sans-serif;
+  --ff-secondary: "Raleway", Arial, Verdana, sans-serif;
 
   --fw-medium: 500;
   --fw-semibold: 600;
@@ -109,8 +109,8 @@ label {
 input,
 textarea {
   width: 100%;
-  padding: 0.5rem;
   margin-block: 0.3rem 1rem;
+  padding: 0.5rem;
   font-family: inherit;
   border-radius: var(--bd-radius-small);
   border: var(--bd) var(--clr-black);
