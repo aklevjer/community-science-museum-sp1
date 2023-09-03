@@ -4,15 +4,18 @@
 
 :root {
   --clr-purple: #6b30d2;
-  --clr-orange: #ff6a48;
-  --clr-green: #03d054;
+  --clr-light-purple: #cdb9f0;
+  --clr-light-orange: #ffaf9c;
+  --clr-green: #026729;
+  --clr-light-green: #89fdb7;
+  --clr-magneta: #aa1252;
   --clr-red: #b50000;
   --clr-white: #ffffff;
   --clr-black: #000000;
 
   --clr-purple-shadow: rgba(107, 48, 210, 0.3);
-  --clr-orange-shadow: rgba(255, 106, 72, 0.3);
-  --clr-green-shadow: rgba(3, 208, 84, 0.3);
+  --clr-green-shadow: rgba(2, 103, 41, 0.3);
+  --clr-magneta-shadow: rgba(170, 18, 82, 0.3);
   --clr-light-shadow: rgba(0, 0, 0, 0.2);
   --clr-medium-shadow: rgba(0, 0, 0, 0.75);
   --clr-dark-shadow: rgba(0, 0, 0, 0.9);
@@ -267,12 +270,24 @@ input[type="submit"] {
   background-color: var(--clr-purple);
 }
 
-.line-orange::before {
-  background-color: var(--clr-orange);
+.line-light-purple::before {
+  background-color: var(--clr-light-purple);
 }
 
 .line-green::before {
   background-color: var(--clr-green);
+}
+
+.line-light-green::before {
+  background-color: var(--clr-light-green);
+}
+
+.line-magneta::before {
+  background-color: var(--clr-magneta);
+}
+
+.line-light-orange::before {
+  background-color: var(--clr-light-orange);
 }
 
 .border-black {
@@ -283,24 +298,24 @@ input[type="submit"] {
   border: var(--bd) var(--clr-purple);
 }
 
-.border-orange {
-  border: var(--bd) var(--clr-orange);
-}
-
 .border-green {
   border: var(--bd) var(--clr-green);
+}
+
+.border-magneta {
+  border: var(--bd) var(--clr-magneta);
 }
 
 .shadow-purple {
   box-shadow: 0 0 20px 0 var(--clr-purple-shadow);
 }
 
-.shadow-orange {
-  box-shadow: 0 0 20px 0 var(--clr-orange-shadow);
-}
-
 .shadow-green {
   box-shadow: 0 0 20px 0 var(--clr-green-shadow);
+}
+
+.shadow-magneta {
+  box-shadow: 0 0 20px 0 var(--clr-magneta-shadow);
 }
 
 .shadow {
@@ -447,8 +462,9 @@ main > :not(:first-child, :last-child) {
 /* -------------------------------------------- */
 
 .newsletter {
-  padding-block: 3.5rem;
-  background-color: var(--clr-orange);
+  padding-block: 6rem 3.5rem;
+  background: url("../images/shared/waves-bg.svg") center;
+  background-size: cover;
 }
 
 .newsletter__title {
@@ -481,7 +497,7 @@ main > :not(:first-child, :last-child) {
 /* -------------------------------------------- */
 
 footer {
-  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("../images/shared/footer-bg-pattern.jpg");
+  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("../images/shared/footer-bg.jpg");
   background-size: cover;
 }
 
