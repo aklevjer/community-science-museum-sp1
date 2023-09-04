@@ -177,6 +177,9 @@ input[type="submit"] {
 /*                Utility Classes               */
 /* -------------------------------------------- */
 
+/* Container
+ Inspiration: https://www.youtube.com/watch?v=wBKT2KN_Y9s&t=155s */
+
 .container {
   width: min(var(--maxw-page), 100% - var(--minm-page));
   margin-inline: auto;
@@ -335,7 +338,7 @@ input[type="submit"] {
   background-color: var(--clr-white);
 }
 
-.card-container {
+.card-wrapper {
   margin-top: 3.5rem;
   display: flex;
   justify-content: center;
@@ -343,7 +346,7 @@ input[type="submit"] {
   gap: 4rem 2rem;
 }
 
-.card-item {
+.card-wrapper__item {
   position: relative;
   max-width: 400px;
   min-height: 260px;
@@ -352,7 +355,7 @@ input[type="submit"] {
   overflow: visible;
 }
 
-.card-item__icon {
+.card-wrapper__item__icon {
   position: absolute;
   top: -32px;
   left: 50%;
@@ -370,14 +373,17 @@ input[type="submit"] {
   min-height: var(--hgt-header);
 }
 
+/* Checkbox hack drop-down menu
+Inspiration: https://codepen.io/alvarotrigo/pen/MWEJEWG */
+
 .header__nav {
   position: absolute;
   top: var(--hgt-header);
   left: 0;
   width: 100%;
   border-radius: 0 0 var(--bd-radius-large) var(--bd-radius-large);
+  box-shadow: 0px 20px 20px -6px var(--clr-light-shadow);
   background-color: var(--clr-white);
-  box-shadow: 0px 20px 20px -6px rgba(0, 0, 0, 0.1);
   z-index: 3;
 }
 
@@ -398,12 +404,12 @@ input[type="submit"] {
   margin-bottom: 1rem;
 }
 
-#burger-toggle:checked ~ .burger-button .fa-times {
-  display: inline-block;
-}
-
 #burger-toggle:checked ~ .burger-button .fa-bars {
   display: none;
+}
+
+#burger-toggle:checked ~ .burger-button .fa-times {
+  display: inline-block;
 }
 
 .burger-button {
@@ -542,19 +548,18 @@ footer p {
 /* ----------------- Showcase ----------------- */
 
 .showcase__content {
-  max-width: 45ch;
   padding: 3rem 1.5rem;
 }
 
 /* ------------------ Events ------------------ */
 
 .events,
-.events__container {
+.events__wrapper {
   gap: 2rem;
 }
 
-.events__container {
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+.events__wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .events__card {
@@ -568,15 +573,15 @@ footer p {
 /* ------------------- Plan ------------------- */
 
 .plan,
-.plan__container {
+.plan__wrapper {
   gap: 2rem;
 }
 
-.plan__container {
+.plan__wrapper {
   margin: 0;
 }
 
-.plan__container .card-item {
+.plan__wrapper .card-wrapper__item {
   padding: 2rem;
 }
 
@@ -613,26 +618,26 @@ footer p {
 /*                 Explore Page                 */
 /* -------------------------------------------- */
 
-.explore-areas,
-.explore-card {
+.explore,
+.explore__card {
   gap: 3rem;
 }
 
-.explore-card {
-  padding: 3rem 2rem;
+.explore__card {
+  padding: 2rem;
   border-radius: 70px;
   transition: transform 300ms ease;
 }
 
-.explore-card:hover {
+.explore__card:hover {
   transform: scale(1.02);
 }
 
-.explore-card__image {
+.explore__card__image {
   border-radius: 50%;
 }
 
-.explore-card__content {
+.explore__card__content {
   max-width: 50ch;
 }
 
@@ -645,33 +650,33 @@ footer p {
   gap: 4rem 2rem;
 }
 
-.exhibition-card,
-.exhibition__illustration {
+.exhibitions__card,
+.exhibitions__card__illustration {
   transition: transform 300ms ease;
 }
 
-.exhibition-card {
+.exhibitions__card {
   grid-template-rows: min-content auto;
 }
 
-.exhibition-card:hover {
+.exhibitions__card:hover {
   transform: translateY(-1rem);
 }
 
-.exhibition-card:hover .exhibition__illustration {
+.exhibitions__card:hover .exhibitions__card__illustration {
   transform: rotate(20deg);
 }
 
-.exhibition__image {
+.exhibitions__card__image {
   border-width: 0 0 10px 0;
 }
 
-.exhibition__content {
+.exhibitions__card__content {
   padding: 1rem;
   grid-template-rows: min-content auto auto;
 }
 
-.exhibition__illustration {
+.exhibitions__card__illustration {
   margin-top: 2rem;
   place-self: end center;
 }
@@ -682,8 +687,9 @@ footer p {
 
 /* ------------- Map & Contact Us ------------- */
 
-.map-contact {
+.map-contact-us {
   margin-top: 14rem;
+  align-items: stretch;
 }
 
 .map,
@@ -722,7 +728,7 @@ iframe {
   z-index: 1;
 }
 
-.contact {
+.contact-us {
   padding: 2rem clamp(2rem, 8vw, 7rem);
   border-radius: 0 0 var(--bd-radius-medium) var(--bd-radius-medium);
 }
@@ -731,19 +737,19 @@ iframe {
 /*               Get Involved Page              */
 /* -------------------------------------------- */
 
-.get-involved-container {
-  max-width: 600px;
+.get-involved {
+  align-items: stretch;
+  gap: 4rem;
+}
+
+.get-involved__card {
   padding: 2rem;
   gap: 2rem;
 }
 
-.get-involved-container,
-.get-involved-container__image {
+.get-involved__card,
+.get-involved__card__image {
   border-radius: var(--bd-radius-medium);
-}
-
-.get-involved-container__content {
-  max-width: 45ch;
 }
 
 /* -------------------------------------------- */
@@ -789,7 +795,7 @@ iframe {
   .home-hero {
     position: relative;
     min-height: 400px;
-    display: flex;
+    align-items: stretch;
     flex-direction: row-reverse;
     overflow: hidden;
     border-radius: var(--bd-radius-small) var(--bd-radius-small) 0 0;
@@ -801,7 +807,8 @@ iframe {
     position: absolute;
   }
 
-  /* Parallelogram */
+  /* Parallelogram
+  Inspiration: https://stackoverflow.com/a/40386215 */
 
   .home-hero::before {
     left: 0;
@@ -838,11 +845,16 @@ iframe {
   /* ----------------- Showcase ----------------- */
 
   .showcase {
-    display: flex;
+    flex-direction: row;
+    align-items: stretch;
   }
 
   .showcase > div {
     flex: 1;
+  }
+
+  .showcase__content {
+    max-width: 45ch;
   }
 
   .showcase__image {
@@ -854,21 +866,21 @@ iframe {
 
   .events {
     grid-template-areas:
-      "event-title event-cta"
-      "events-container events-container";
+      "events-title events-cta"
+      "events-wrapper events-wrapper";
   }
 
   .events__title {
-    grid-area: event-title;
+    grid-area: events-title;
   }
 
   .events__cta {
-    grid-area: event-cta;
+    grid-area: events-cta;
     place-self: center end;
   }
 
-  .events__container {
-    grid-area: events-container;
+  .events__wrapper {
+    grid-area: events-wrapper;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -890,7 +902,7 @@ iframe {
   .plan {
     grid-template-areas:
       "plan-title plan-cta"
-      "plan-container plan-container";
+      "plan-wrapper plan-wrapper";
   }
 
   .plan__title {
@@ -902,34 +914,33 @@ iframe {
     place-self: center end;
   }
 
-  .plan__container {
-    grid-area: plan-container;
+  .plan__wrapper {
+    grid-area: plan-wrapper;
   }
 
   /* --------------- Explore Page --------------- */
 
-  .explore-areas {
+  .explore {
     gap: 5rem;
     align-items: stretch;
   }
 
-  .explore-card:nth-child(3) {
-    align-self: end;
+  .explore__card {
+    max-width: 950px;
+    flex-direction: row;
   }
 
-  .explore-card {
-    max-width: 950px;
-    padding-inline: 2.5rem;
-    flex-direction: row;
+  .explore__card:nth-child(2) {
+    align-self: end;
   }
 
   /* --------------- Visit Us Page -------------- */
 
-  .map-contact {
-    display: flex;
+  .map-contact-us {
+    flex-direction: row;
   }
 
-  .map-contact > div {
+  .map-contact-us > div {
     flex-basis: 50%;
   }
 
@@ -942,23 +953,23 @@ iframe {
     border-radius: var(--bd-radius-medium) 0 0 var(--bd-radius-medium);
   }
 
-  .contact {
+  .contact-us {
     border-radius: 0 var(--bd-radius-medium) var(--bd-radius-medium) 0;
   }
 
   /* ------------- Get Involved Page ------------ */
 
-  .get-involved-container {
-    max-width: none;
+  .get-involved__card {
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .get-involved-container__content {
+  .get-involved__card__content {
     flex-basis: 60%;
+    max-width: 45ch;
   }
 
-  .get-involved-container__image {
+  .get-involved__card__image {
     min-height: 350px;
   }
 
