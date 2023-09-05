@@ -151,6 +151,7 @@ input[type="submit"] {
   justify-self: center;
   gap: 0.5rem;
   color: var(--clr-white);
+  outline-offset: 3px;
   border-radius: var(--bd-radius-small);
   background-color: var(--clr-black);
 }
@@ -559,7 +560,7 @@ footer p {
 }
 
 .events__wrapper {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .events__card {
@@ -567,7 +568,8 @@ footer p {
 }
 
 .events__card__content {
-  padding: 1.5rem;
+  padding: 1rem;
+  font-size: 0.95em;
 }
 
 /* ------------------- Plan ------------------- */
@@ -885,7 +887,7 @@ iframe {
   }
 
   .events__card {
-    grid-template: repeat(auto-fit, minmax(240px, auto)) / repeat(auto-fit, minmax(240px, auto));
+    grid-template: repeat(auto-fit, minmax(215px, auto)) / repeat(auto-fit, minmax(215px, auto));
   }
 
   .events__card__image {
