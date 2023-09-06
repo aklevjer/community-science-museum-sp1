@@ -449,19 +449,19 @@ main > :not(:first-child, :last-child) {
 }
 
 .explore-hero {
-  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("../images/explore/explore-hero.jpg") center 20%;
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/explore/explore-hero.jpg") center 20%;
 }
 
 .exhibitions-hero {
-  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("../images/exhibitions/exhibitions-hero.jpg") center 15%;
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/exhibitions/exhibitions-hero.jpg") center 15%;
 }
 
 .visit-us-hero {
-  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("../images/visit-us/visit-us-hero.jpg") center 45%;
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/visit-us/visit-us-hero.jpg") center 45%;
 }
 
 .get-involved-hero {
-  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("../images/get-involved/get-involved-hero.jpg") center 50%;
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/get-involved/get-involved-hero.jpg") center 50%;
 }
 
 /* -------------------------------------------- */
@@ -470,7 +470,7 @@ main > :not(:first-child, :last-child) {
 
 .newsletter {
   padding-block: 6rem 3.5rem;
-  background: url("../images/shared/waves-bg.svg") center;
+  background: url("/images/shared/waves-bg.svg") center;
   background-size: cover;
 }
 
@@ -504,7 +504,7 @@ main > :not(:first-child, :last-child) {
 /* -------------------------------------------- */
 
 footer {
-  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("../images/shared/footer-bg.jpg");
+  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("/images/shared/footer-bg.jpg");
   background-size: cover;
 }
 
@@ -708,16 +708,16 @@ Inspiration: https://stackoverflow.com/a/40432141 */
   border-radius: var(--bd-radius-medium) var(--bd-radius-medium) 0 0;
 }
 
+iframe,
+.map__card {
+  position: absolute;
+}
+
 iframe {
   bottom: -20%;
   left: -50%;
   width: 200%;
   height: 150%;
-}
-
-.map__card,
-iframe {
-  position: absolute;
 }
 
 .map__card {
@@ -733,6 +733,10 @@ iframe {
 .contact-us {
   padding: 2rem clamp(2rem, 8vw, 7rem);
   border-radius: 0 0 var(--bd-radius-medium) var(--bd-radius-medium);
+}
+
+.contact-us__body {
+  margin-bottom: 1.5rem;
 }
 
 /* -------------------------------------------- */
@@ -855,13 +859,13 @@ iframe {
     flex: 1;
   }
 
-  .showcase__content {
-    max-width: 45ch;
-  }
-
   .showcase__image {
     height: 100%;
     object-position: right;
+  }
+
+  .showcase__content {
+    max-width: 45ch;
   }
 
   /* ------------------ Events ------------------ */
