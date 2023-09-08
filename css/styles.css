@@ -18,7 +18,7 @@
   --clr-magneta-shadow: rgba(170, 18, 82, 0.3);
   --clr-light-shadow: rgba(0, 0, 0, 0.2);
   --clr-medium-shadow: rgba(0, 0, 0, 0.75);
-  --clr-dark-shadow: rgba(0, 0, 0, 0.95);
+  --clr-dark-shadow: rgba(0, 0, 0, 0.93);
 
   --ff-primary: "Poppins", Helvetica, Verdana, sans-serif;
   --ff-secondary: "Raleway", Arial, Verdana, sans-serif;
@@ -323,6 +323,10 @@ input[type="submit"] {
   box-shadow: 0 0 50px 0 var(--clr-light-shadow);
 }
 
+.logo {
+  max-width: 112px;
+}
+
 .circle-icon {
   width: 45px;
   height: 45px;
@@ -522,6 +526,14 @@ footer p {
   margin-block: 2rem;
 }
 
+.footer__icons i {
+  transition: transform 100ms ease;
+}
+
+.footer__icons a:is(:hover, :focus) i {
+  transform: scale(1.1);
+}
+
 /* -------------------------------------------- */
 /*                   Home Page                  */
 /* -------------------------------------------- */
@@ -694,7 +706,7 @@ footer p {
   position: relative;
 }
 
-/* Workaround to remove default Google Maps "Info Card"
+/* Workaround to hide the default Google Maps "Info Card"
 Inspiration: https://stackoverflow.com/a/40432141 */
 
 .map__wrapper {
