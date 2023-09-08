@@ -69,6 +69,10 @@ body {
   font-size: 0.9375rem; /* 15px */
 }
 
+main > :not(:first-child, :last-child) {
+  margin-bottom: 7rem;
+}
+
 h2,
 h3 {
   margin-block: 1rem;
@@ -117,56 +121,6 @@ textarea {
 textarea {
   min-height: 120px;
   resize: none;
-}
-
-/* -------------------------------------------- */
-/*                Links / Buttons               */
-/* -------------------------------------------- */
-
-a,
-input[type="submit"] {
-  font-size: inherit;
-  font-weight: var(--fw-medium);
-  text-decoration: none;
-  text-transform: capitalize;
-  cursor: pointer;
-  color: var(--clr-black);
-  border: none;
-}
-
-input[type="submit"] {
-  display: inline-block;
-  color: var(--clr-white);
-}
-
-.cta {
-  padding: 0.5rem 1.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-self: center;
-  gap: 0.5rem;
-  color: var(--clr-white);
-  outline-offset: 3px;
-  border-radius: var(--bd-radius-small);
-  background-color: var(--clr-black);
-}
-
-.fa-arrow-right {
-  transition: transform 300ms ease;
-}
-
-.cta:is(:hover, :focus) .fa-arrow-right {
-  transform: translateX(0.5rem);
-}
-
-.white-cta {
-  color: var(--clr-purple);
-  background-color: var(--clr-white);
-}
-
-.cta:active,
-.burger-button:active {
-  transform: scale(0.95);
 }
 
 /* -------------------------------------------- */
@@ -323,10 +277,6 @@ input[type="submit"] {
   box-shadow: 0 0 50px 0 var(--clr-light-shadow);
 }
 
-.logo {
-  max-width: 112px;
-}
-
 .circle-icon {
   width: 45px;
   height: 45px;
@@ -363,6 +313,85 @@ input[type="submit"] {
   height: 65px;
   transform: translateX(-50%);
   font-size: 2rem;
+}
+
+.logo {
+  max-width: 112px;
+}
+
+.opening-hours li,
+.contact-info li {
+  display: flex;
+}
+
+.opening-hours li {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info,
+.contact-info li {
+  gap: 1rem;
+}
+
+.contact-info {
+  place-content: center;
+}
+
+.contact-info li {
+  align-items: center;
+}
+
+.contact-info a {
+  text-transform: lowercase;
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+}
+
+/* -------------------------------------------- */
+/*                Links / Buttons               */
+/* -------------------------------------------- */
+
+a,
+.cta {
+  font-size: inherit;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--clr-black);
+  border: none;
+}
+
+.cta {
+  padding: 0.5rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 0.5rem;
+  color: var(--clr-white);
+  outline-offset: 3px;
+  border-radius: var(--bd-radius-small);
+  background-color: var(--clr-black);
+}
+
+.fa-arrow-right {
+  transition: transform 300ms ease;
+}
+
+.cta:is(:hover, :focus) .fa-arrow-right {
+  transform: translateX(0.5rem);
+}
+
+.white-cta {
+  color: var(--clr-purple);
+  background-color: var(--clr-white);
+}
+
+.cta:active,
+.burger-button:active {
+  transform: scale(0.95);
 }
 
 /* -------------------------------------------- */
@@ -418,14 +447,6 @@ Inspiration: https://codepen.io/alvarotrigo/pen/MWEJEWG */
   cursor: pointer;
   border: var(--bd) var(--clr-black);
   border-radius: var(--bd-radius-small);
-}
-
-/* -------------------------------------------- */
-/*                     Main                     */
-/* -------------------------------------------- */
-
-main > :not(:first-child, :last-child) {
-  margin-bottom: 7rem;
 }
 
 /* -------------------------------------------- */
@@ -594,35 +615,6 @@ footer p {
   padding: 2rem;
 }
 
-.opening-hours li,
-.contact-info li {
-  display: flex;
-}
-
-.opening-hours li {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact-info,
-.contact-info li {
-  gap: 1rem;
-}
-
-.contact-info {
-  place-content: center;
-}
-
-.contact-info li {
-  align-items: center;
-}
-
-.contact-info a {
-  text-transform: lowercase;
-  text-decoration: underline;
-  text-underline-offset: 0.4rem;
-}
-
 /* -------------------------------------------- */
 /*                 Explore Page                 */
 /* -------------------------------------------- */
@@ -655,7 +647,7 @@ footer p {
 /* -------------------------------------------- */
 
 .exhibitions {
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 4rem 2rem;
 }
 
@@ -683,6 +675,7 @@ footer p {
 .exhibitions__card__content {
   padding: 1rem;
   grid-template-rows: min-content auto auto;
+  font-size: 0.95em;
 }
 
 .exhibitions__card__illustration {
@@ -927,6 +920,16 @@ iframe {
     align-self: end;
   }
 
+  /* ------------- Exhibitions Page ------------- */
+
+  .exhibitions {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+
+  .exhibitions__card__content {
+    font-size: inherit;
+  }
+
   /* --------------- Visit Us Page -------------- */
 
   .map-contact-us {
@@ -989,5 +992,9 @@ iframe {
 
   .footer__icons {
     grid-area: 1 / 2;
+  }
+
+  .footer__copytext {
+    text-align: left;
   }
 }
