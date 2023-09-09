@@ -1,0 +1,55 @@
+/* -------------------------------------------- */
+/*                 Visit Us Page                */
+/* -------------------------------------------- */
+
+/* ------------- Map & Contact Us ------------- */
+
+.map-contact-us {
+  margin-top: 13rem;
+  align-items: stretch;
+}
+
+.map,
+.map__wrapper {
+  position: relative;
+}
+
+/* Workaround to hide the default Google Maps "Info Card"
+  Inspiration: https://stackoverflow.com/a/40432141 */
+
+.map__wrapper {
+  min-height: 350px;
+  overflow: hidden;
+  border-radius: var(--bd-radius-medium) var(--bd-radius-medium) 0 0;
+}
+
+iframe,
+.map__card {
+  position: absolute;
+}
+
+iframe {
+  bottom: -20%;
+  left: -50%;
+  width: 200%;
+  height: 150%;
+}
+
+.map__card {
+  top: -35%;
+  left: 50%;
+  padding: 2rem;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: var(--clr-white);
+  z-index: 1;
+}
+
+.contact-us {
+  padding: 2rem clamp(2rem, 8vw, 7rem);
+  border-radius: 0 0 var(--bd-radius-medium) var(--bd-radius-medium);
+}
+
+.contact-us__body {
+  margin-bottom: 1.5rem;
+}

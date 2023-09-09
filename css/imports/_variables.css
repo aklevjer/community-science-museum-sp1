@@ -1,0 +1,37 @@
+/* -------------------------------------------- */
+/*               Global Variables               */
+/* -------------------------------------------- */
+
+:root {
+  --clr-purple: #6b30d2;
+  --clr-light-purple: #cdb9f0;
+  --clr-light-orange: #ffaf9c;
+  --clr-green: #026729;
+  --clr-light-green: #89fdb7;
+  --clr-magneta: #aa1252;
+  --clr-red: #b50000;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  --clr-purple-shadow: rgba(107, 48, 210, 0.3);
+  --clr-green-shadow: rgba(2, 103, 41, 0.3);
+  --clr-magneta-shadow: rgba(170, 18, 82, 0.3);
+  --clr-light-shadow: rgba(0, 0, 0, 0.2);
+  --clr-medium-shadow: rgba(0, 0, 0, 0.75);
+  --clr-dark-shadow: rgba(0, 0, 0, 0.93);
+
+  --ff-primary: "Poppins", Helvetica, Verdana, sans-serif;
+  --ff-secondary: "Raleway", Arial, Verdana, sans-serif;
+
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --bd: 1px solid;
+  --bd-radius-small: 5px;
+  --bd-radius-medium: 15px;
+  --bd-radius-large: 30px;
+
+  --maxw-page: 1200px;
+  --minm-page: 30px;
+  --hgt-header: 120px;
+}

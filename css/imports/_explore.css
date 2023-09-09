@@ -1,0 +1,26 @@
+/* -------------------------------------------- */
+/*                 Explore Page                 */
+/* -------------------------------------------- */
+
+.explore,
+.explore__card {
+  gap: 3rem;
+}
+
+.explore__card {
+  padding: 2rem;
+  border-radius: 70px;
+  transition: transform 300ms ease;
+}
+
+.explore__card:hover {
+  transform: scale(1.02);
+}
+
+.explore__card__image {
+  border-radius: 50%;
+}
+
+.explore__card__content {
+  max-width: 50ch;
+}

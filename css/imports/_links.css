@@ -1,0 +1,48 @@
+/* -------------------------------------------- */
+/*                Links / Buttons               */
+/* -------------------------------------------- */
+
+a,
+.cta {
+  font-size: inherit;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--clr-black);
+  border: none;
+}
+
+.cta {
+  padding: 0.5rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  gap: 0.5rem;
+  color: var(--clr-white);
+  outline-offset: 3px;
+  border-radius: var(--bd-radius-small);
+  background-color: var(--clr-black);
+}
+
+.cta:is(:hover, :focus) {
+  transform: scale(1.03);
+}
+
+.fa-arrow-right {
+  transition: transform 300ms ease;
+}
+
+.cta:is(:hover, :focus) .fa-arrow-right {
+  transform: translateX(0.5rem);
+}
+
+.white-cta {
+  color: var(--clr-purple);
+  background-color: var(--clr-white);
+}
+
+.cta:active {
+  transform: scale(1);
+}

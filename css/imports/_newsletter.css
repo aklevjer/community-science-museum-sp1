@@ -1,0 +1,34 @@
+/* -------------------------------------------- */
+/*                  Newsletter                  */
+/* -------------------------------------------- */
+
+.newsletter {
+  padding-block: 6rem 3.5rem;
+  background: url("/images/shared/waves-bg.svg") center;
+  background-size: cover;
+}
+
+.newsletter__title {
+  max-width: 30ch;
+  margin-bottom: 1.5rem;
+  font-family: var(--ff-secondary);
+  font-size: 1.5em;
+}
+
+.newsletter__form {
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.newsletter__form input {
+  margin: 0;
+}
+
+.newsletter__form input[type="email"] {
+  max-width: 200px;
+  border: none;
+}
+
+.newsletter__form .cta {
+  width: fit-content;
+}

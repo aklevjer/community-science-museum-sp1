@@ -1,0 +1,40 @@
+/* -------------------------------------------- */
+/*               Exhibitions Page               */
+/* -------------------------------------------- */
+
+.exhibitions {
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 4rem 2rem;
+}
+
+.exhibitions__card,
+.exhibitions__card__illustration {
+  transition: transform 300ms ease;
+}
+
+.exhibitions__card {
+  grid-template-rows: min-content auto;
+}
+
+.exhibitions__card:hover {
+  transform: translateY(-1rem);
+}
+
+.exhibitions__card:hover .exhibitions__card__illustration {
+  transform: rotate(20deg);
+}
+
+.exhibitions__card__image {
+  border-width: 0 0 10px 0;
+}
+
+.exhibitions__card__content {
+  padding: 1rem;
+  grid-template-rows: min-content auto auto;
+  font-size: 0.95em;
+}
+
+.exhibitions__card__illustration {
+  margin-top: 1rem;
+  place-self: end center;
+}

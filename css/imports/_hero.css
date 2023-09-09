@@ -1,0 +1,34 @@
+/* -------------------------------------------- */
+/*                  Page Heroes                 */
+/* -------------------------------------------- */
+
+.hero,
+.home-hero {
+  max-width: var(--maxw-page);
+  margin: 0 auto 5rem;
+  color: var(--clr-white);
+}
+
+.hero {
+  min-height: 200px;
+}
+
+.home-hero {
+  background-color: var(--clr-purple);
+}
+
+.explore-hero {
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/explore/explore-hero.jpg") center 20%;
+}
+
+.exhibitions-hero {
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/exhibitions/exhibitions-hero.jpg") center 15%;
+}
+
+.visit-us-hero {
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/visit-us/visit-us-hero.jpg") center 45%;
+}
+
+.get-involved-hero {
+  background: linear-gradient(var(--clr-medium-shadow), var(--clr-medium-shadow)), url("/images/get-involved/get-involved-hero.jpg") center 50%;
+}

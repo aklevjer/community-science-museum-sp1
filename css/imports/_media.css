@@ -1,0 +1,244 @@
+/* -------------------------------------------- */
+/*                  Media Query                 */
+/* -------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* ---------------- Navigation ---------------- */
+
+  .header__nav {
+    position: static;
+    width: fit-content;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .header__nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .header__nav li {
+    height: auto !important;
+    margin: 0 !important;
+    line-height: normal;
+    overflow: visible;
+    transition: none;
+  }
+
+  .burger-button {
+    display: none;
+  }
+
+  /* ---------------- Page Heroes --------------- */
+
+  .hero {
+    border-radius: var(--bd-radius-small);
+  }
+
+  /* ----------------- Home Page ---------------- */
+  /* ------------------- Hero ------------------- */
+
+  .home-hero {
+    position: relative;
+    min-height: 400px;
+    align-items: stretch;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    border-radius: var(--bd-radius-small) var(--bd-radius-small) 0 0;
+  }
+
+  .home-hero::before,
+  .home-hero::after {
+    content: "";
+    position: absolute;
+  }
+
+  /* Parallelogram
+    Inspiration: https://stackoverflow.com/a/40386215 */
+
+  .home-hero::before {
+    left: 0;
+    width: 50%;
+    height: calc(100% - 30px);
+    transform: skew(-10deg);
+    transform-origin: bottom;
+    background-color: var(--clr-purple);
+  }
+
+  /* Bottom Part */
+
+  .home-hero::after {
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    border-radius: var(--bd-radius-large) var(--bd-radius-large) 0 0;
+    background-color: var(--clr-white);
+  }
+
+  .home-hero > div {
+    flex: 1;
+  }
+
+  .home-hero__content {
+    padding: 0rem 2rem 1.8rem;
+    z-index: 1;
+  }
+
+  .home-hero__image {
+    height: 100%;
+  }
+
+  /* ----------------- Showcase ----------------- */
+
+  .showcase {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .showcase > div {
+    flex: 1;
+  }
+
+  .showcase__image {
+    height: 100%;
+    object-position: right;
+  }
+
+  .showcase__content {
+    max-width: 45ch;
+  }
+
+  /* ------------ Special Exhibitions ----------- */
+
+  .spec-exhibits__cta {
+    grid-area: 1 / 2;
+    place-self: center end;
+  }
+
+  .spec-exhibits__wrapper {
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .spec-exhibits__card {
+    grid-template: repeat(auto-fit, minmax(215px, auto)) / repeat(auto-fit, minmax(215px, auto));
+  }
+
+  .spec-exhibits__card__image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .spec-exhibits__card__content {
+    padding-block: 2rem;
+  }
+
+  /* ------------------- Plan ------------------- */
+
+  .plan__cta {
+    grid-area: 1 / 2;
+    place-self: center end;
+  }
+
+  .plan__wrapper {
+    grid-column: 1 / 3;
+  }
+
+  /* --------------- Explore Page --------------- */
+
+  .explore {
+    gap: 5rem;
+    align-items: stretch;
+  }
+
+  .explore__card {
+    max-width: 950px;
+    flex-direction: row;
+  }
+
+  .explore__card:nth-child(2) {
+    align-self: end;
+  }
+
+  /* ------------- Exhibitions Page ------------- */
+
+  .exhibitions {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+
+  .exhibitions__card__content {
+    font-size: inherit;
+  }
+
+  .exhibitions__card__illustration {
+    margin-top: 2rem;
+  }
+
+  /* --------------- Visit Us Page -------------- */
+
+  .map-contact-us {
+    flex-direction: row;
+  }
+
+  .map-contact-us > div {
+    flex-basis: 50%;
+  }
+
+  .map__card {
+    top: -12%;
+  }
+
+  .map__wrapper {
+    min-height: 100%;
+    border-radius: var(--bd-radius-medium) 0 0 var(--bd-radius-medium);
+  }
+
+  .contact-us {
+    border-radius: 0 var(--bd-radius-medium) var(--bd-radius-medium) 0;
+  }
+
+  /* ------------- Get Involved Page ------------ */
+
+  .get-involved__card {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .get-involved__card__content {
+    flex-basis: 60%;
+    max-width: 45ch;
+  }
+
+  .get-involved__card__image {
+    min-height: 350px;
+  }
+
+  /* ------------------ Footer ------------------ */
+
+  .footer__container {
+    padding-bottom: 2rem;
+    place-items: end start;
+    gap: 1rem;
+  }
+
+  .footer__nav {
+    margin-bottom: 0;
+  }
+
+  .footer__nav ul {
+    flex-direction: row;
+  }
+
+  .footer__icons,
+  .footer__copytext {
+    justify-self: end;
+  }
+
+  .footer__icons {
+    grid-area: 1 / 2;
+  }
+
+  .footer__copytext {
+    text-align: left;
+  }
+}

@@ -1,0 +1,58 @@
+/* -------------------------------------------- */
+/*              Header & Navigation             */
+/* -------------------------------------------- */
+
+.header__container {
+  min-height: var(--hgt-header);
+}
+
+/* Checkbox hack drop-down menu
+  Inspiration: https://codepen.io/alvarotrigo/pen/MWEJEWG */
+
+.header__nav {
+  position: absolute;
+  top: var(--hgt-header);
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 var(--bd-radius-large) var(--bd-radius-large);
+  box-shadow: 0px 20px 20px -6px var(--clr-light-shadow);
+  background-color: var(--clr-white);
+  z-index: 3;
+}
+
+.header__nav li {
+  height: 0;
+  line-height: 2.5rem;
+  text-align: center;
+  overflow: hidden;
+  transition: height 250ms ease;
+}
+
+#burger-toggle:checked ~ .header__nav li {
+  height: 2.5rem;
+  overflow: visible;
+}
+
+#burger-toggle:checked ~ .header__nav li:last-child {
+  margin-bottom: 1rem;
+}
+
+#burger-toggle:checked ~ .burger-button .fa-bars {
+  display: none;
+}
+
+#burger-toggle:checked ~ .burger-button .fa-times {
+  display: inline-block;
+}
+
+.burger-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  border: var(--bd) var(--clr-black);
+  border-radius: var(--bd-radius-small);
+}
+
+.burger-button:active {
+  transform: scale(0.95);
+}

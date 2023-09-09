@@ -1,0 +1,35 @@
+/* -------------------------------------------- */
+/*                    Footer                    */
+/* -------------------------------------------- */
+
+footer {
+  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("/images/shared/footer-bg.jpg");
+  background-size: cover;
+}
+
+.footer__container {
+  padding-block: 2rem 1rem;
+  place-items: center;
+}
+
+footer a,
+footer p {
+  color: var(--clr-white);
+}
+
+.footer__nav ul,
+.footer__icons {
+  gap: 1.5rem;
+}
+
+.footer__nav {
+  margin-block: 2rem;
+}
+
+.footer__icons i {
+  transition: color 300ms ease;
+}
+
+.footer__icons a:is(:hover, :focus) i {
+  color: var(--clr-light-orange);
+}
