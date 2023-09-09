@@ -288,7 +288,7 @@ textarea {
   background-color: var(--clr-white);
 }
 
-.card-wrapper {
+.card-container {
   margin-top: 3.5rem;
   display: flex;
   justify-content: center;
@@ -296,7 +296,7 @@ textarea {
   gap: 4rem 2rem;
 }
 
-.card-wrapper__item {
+.card-container__card {
   position: relative;
   max-width: 400px;
   min-height: 260px;
@@ -305,7 +305,7 @@ textarea {
   overflow: visible;
 }
 
-.card-wrapper__item__icon {
+.card-container__card__icon {
   position: absolute;
   top: -32px;
   left: 50%;
@@ -618,7 +618,7 @@ footer p {
   margin: 0;
 }
 
-.plan__wrapper .card-wrapper__item {
+.plan__wrapper .card-container__card {
   padding: 2rem;
 }
 
