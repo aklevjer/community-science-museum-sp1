@@ -146,7 +146,7 @@
 
   /* --------------- Explore Page --------------- */
 
-  .explore {
+  .explore__wrapper {
     gap: 5rem;
     align-items: stretch;
   }
@@ -162,7 +162,7 @@
 
   /* ------------- Exhibitions Page ------------- */
 
-  .exhibitions {
+  .exhibitions__wrapper {
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 

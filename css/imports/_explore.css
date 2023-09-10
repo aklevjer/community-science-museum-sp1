@@ -2,7 +2,7 @@
 /*                 Explore Page                 */
 /* -------------------------------------------- */
 
-.explore,
+.explore__wrapper,
 .explore__card {
   gap: 3rem;
 }
