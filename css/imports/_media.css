@@ -199,17 +199,17 @@
 
   /* ------------- Get Involved Page ------------ */
 
-  .get-involved__card {
+  .get-involved-card {
     flex-direction: row;
     justify-content: space-around;
   }
 
-  .get-involved__card__content {
+  .get-involved-card__content {
     flex-basis: 60%;
     max-width: 45ch;
   }
 
-  .get-involved__card__image {
+  .get-involved-card__image {
     min-height: 350px;
   }
 
