@@ -45,15 +45,15 @@
 
 /* ------------------- Plan ------------------- */
 
-.plan,
-.plan__wrapper {
+.plan-visit,
+.plan-visit .card-container {
   gap: 2rem;
 }
 
-.plan__wrapper {
+.plan-visit .card-container {
   margin: 0;
 }
 
-.plan__wrapper .card-container__card {
+.plan-visit .card-container__card {
   padding: 2rem;
 }

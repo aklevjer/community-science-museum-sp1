@@ -135,12 +135,12 @@
 
   /* ------------------- Plan ------------------- */
 
-  .plan__cta {
+  .plan-visit__cta {
     grid-area: 1 / 2;
     place-self: center end;
   }
 
-  .plan__wrapper {
+  .plan-visit .card-container {
     grid-column: 1 / 3;
   }
 
@@ -162,7 +162,7 @@
 
   /* ------------- Exhibitions Page ------------- */
 
-  .exhibitions__wrapper {
+  .exhibitions__list {
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 
