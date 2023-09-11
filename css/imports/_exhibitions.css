@@ -2,7 +2,7 @@
 /*               Exhibitions Page               */
 /* -------------------------------------------- */
 
-.exhibitions__list {
+.exhibitions__wrapper {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 4rem 2rem;
 }

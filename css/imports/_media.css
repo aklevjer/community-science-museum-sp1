@@ -162,7 +162,7 @@
 
   /* ------------- Exhibitions Page ------------- */
 
-  .exhibitions__list {
+  .exhibitions__wrapper {
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 
