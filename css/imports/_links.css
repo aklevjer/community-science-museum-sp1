@@ -26,7 +26,7 @@ a,
   background-color: var(--clr-black);
 }
 
-.cta:is(:hover, :focus) {
+.cta:is(:hover, :focus, :active) {
   transform: scale(1.03);
 }
 
@@ -41,8 +41,4 @@ a,
 .white-cta {
   color: var(--clr-purple);
   background-color: var(--clr-white);
-}
-
-.cta:active {
-  transform: scale(1);
 }
