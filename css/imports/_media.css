@@ -36,7 +36,7 @@
   }
 
   /* ----------------- Home Page ---------------- */
-  /* ------------------- Hero ------------------- */
+  /* -------------- Hero / Showcase ------------- */
 
   .home-hero {
     position: relative;
@@ -75,7 +75,8 @@
     background-color: var(--clr-white);
   }
 
-  .home-hero > div {
+  .home-hero > div,
+  .showcase > div {
     flex: 1;
   }
 
@@ -84,23 +85,17 @@
     z-index: 1;
   }
 
-  .home-hero__image {
+  .home-hero__image,
+  .showcase__image {
     height: 100%;
   }
-
-  /* ----------------- Showcase ----------------- */
 
   .showcase {
     flex-direction: row;
     align-items: stretch;
   }
 
-  .showcase > div {
-    flex: 1;
-  }
-
   .showcase__image {
-    height: 100%;
     object-position: right;
   }
 
@@ -108,15 +103,20 @@
     max-width: 45ch;
   }
 
-  /* ------------ Special Exhibitions ----------- */
+  /* ----- Special Exhibitions / Plan Visit ----- */
 
-  .spec-exhibits__cta {
+  .spec-exhibits__cta,
+  .plan-visit__cta {
     grid-area: 1 / 2;
     place-self: center end;
   }
 
-  .spec-exhibits__wrapper {
+  .spec-exhibits__wrapper,
+  .plan-visit .card-container {
     grid-column: 1 / 3;
+  }
+
+  .spec-exhibits__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -131,17 +131,6 @@
 
   .spec-exhibits__card__content {
     padding-block: 2rem;
-  }
-
-  /* ------------------- Plan ------------------- */
-
-  .plan-visit__cta {
-    grid-area: 1 / 2;
-    place-self: center end;
-  }
-
-  .plan-visit .card-container {
-    grid-column: 1 / 3;
   }
 
   /* --------------- Explore Page --------------- */

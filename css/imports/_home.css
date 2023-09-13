@@ -2,9 +2,10 @@
 /*                   Home Page                  */
 /* -------------------------------------------- */
 
-/* ------------------- Hero ------------------- */
+/* -------------- Hero / Showcase ------------- */
 
-.home-hero__content {
+.home-hero__content,
+.showcase__content {
   padding: 3rem 1.5rem;
 }
 
@@ -17,16 +18,12 @@
   margin-block: 1rem 1.5rem;
 }
 
-/* ----------------- Showcase ----------------- */
-
-.showcase__content {
-  padding: 3rem 1.5rem;
-}
-
-/* ------------ Special Exhibitions ----------- */
+/* ----- Special Exhibitions / Plan Visit ----- */
 
 .spec-exhibits,
-.spec-exhibits__wrapper {
+.spec-exhibits__wrapper,
+.plan-visit,
+.plan-visit .card-container {
   gap: 2rem;
 }
 
@@ -41,13 +38,6 @@
 .spec-exhibits__card__content {
   padding: 1rem;
   font-size: 0.95em;
-}
-
-/* ------------------- Plan ------------------- */
-
-.plan-visit,
-.plan-visit .card-container {
-  gap: 2rem;
 }
 
 .plan-visit .card-container {
