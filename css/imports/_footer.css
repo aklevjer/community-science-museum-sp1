@@ -3,8 +3,7 @@
 /* -------------------------------------------- */
 
 footer {
-  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("/images/shared/footer-bg.jpg");
-  background-size: cover;
+  background: linear-gradient(var(--clr-dark-shadow), var(--clr-dark-shadow)), url("/images/shared/footer-bg.jpg") left top / cover;
 }
 
 .footer__container {
