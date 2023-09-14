@@ -197,10 +197,10 @@
 .opening-hours li,
 .contact-info li {
   display: flex;
+  align-items: center;
 }
 
 .opening-hours li {
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -211,10 +211,6 @@
 
 .contact-info {
   place-content: center;
-}
-
-.contact-info li {
-  align-items: center;
 }
 
 .contact-info a {
