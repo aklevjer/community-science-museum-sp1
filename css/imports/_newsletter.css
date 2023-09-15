@@ -4,8 +4,7 @@
 
 .newsletter {
   padding-block: 6rem 3.5rem;
-  background: url("/images/shared/waves-bg.svg") center;
-  background-size: cover;
+  background: url("/images/shared/waves-bg.svg") center / cover;
 }
 
 .newsletter__title {
