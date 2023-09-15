@@ -134,18 +134,6 @@
   border: var(--bd) var(--clr-magenta);
 }
 
-.shadow-purple {
-  box-shadow: 0 0 20px 0 var(--clr-purple-shadow);
-}
-
-.shadow-green {
-  box-shadow: 0 0 20px 0 var(--clr-green-shadow);
-}
-
-.shadow-magenta {
-  box-shadow: 0 0 20px 0 var(--clr-magenta-shadow);
-}
-
 .shadow {
   overflow: hidden;
   border-radius: var(--bd-radius-medium);
